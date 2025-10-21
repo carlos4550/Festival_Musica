@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/*.sobre-festival{
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5rem;
+}*/
+
+/*.sobre-festival{
+    padding: 5rem 0;
+   @include m.tablet {
+        @include m.grid;
+   }
+}*/
+
+/*.sobre-festival{
+    padding: 5rem 0;
+   @include m.tablet {
+        @include m.grid(2);
+   }
+}*/
+
+.sobre-festival{
+    padding: 5rem 0;
+   @include m.tablet {
+        @include m.grid(2, 5rem);
+   }
+}
+
+.contenido-festival{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 5rem;
+    @include m.tablet {
+        margin-top: 0;
+    }
+    h2{
+        margin-bottom: 5rem;
+    }
+    .fecha{
+        color: v.$rosa;
+    }
+}
